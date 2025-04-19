@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Meallist from "./Meallist";
-import "./mealPlanner.css"
+import "../MealPlanner/MealPlanner.css"
 
 function MealPlanner() {
   const [mealData, setMealData] = useState(null);
