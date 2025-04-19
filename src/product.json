@@ -1,0 +1,24 @@
+
+[
+    {
+      "id": 1,
+      "img": "./assets/img/p-1.png",
+      "title": "Protein Powder 2kg",
+      "desc": "High quality protein",
+      "price": "$45"
+    },
+    {
+      "id": 2,
+      "img": "./assets/img/p-2.png",
+      "title": "Mass Gainer Max",
+      "desc": "Perfect for bulking fast",
+      "price": "$55"
+    },
+    {
+      "id": 3,
+      "img": "./assets/img/p-3.png",
+      "title": "Creatine Boost",
+      "desc": "Enhance your performance",
+      "price": "$30"
+    }
+  ]

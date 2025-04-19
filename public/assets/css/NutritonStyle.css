@@ -1,0 +1,210 @@
+/* main.css */
+:root {
+    --primary-green: #2d5d4e;
+    --secondary-green: #4a7867;
+    --accent-green: #7dae9a;
+    --light-green: #e8f5e9;
+    --background: #f5fdfa;
+    --text-dark: #2c3e30;
+    --text-light: #ffffff;
+  }
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  body {
+    background-color: var(--background);
+    color: var(--text-dark);
+    line-height: 1.6;
+  }
+  
+  .nutrition-calculator {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  }
+  
+  .input-section {
+    background: var(--light-green);
+    padding: 2rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+  }
+  
+  .unit-toggle {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .btn {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 25px;
+    background: var(--secondary-green);
+    color: var(--text-light);
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .btn:hover {
+    background: var(--primary-green);
+    transform: translateY(-2px);
+  }
+  
+  .btn-active {
+    background: var(--primary-green);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--primary-green);
+  }
+  
+  .inputs {
+    width: 100%;
+    padding: 0.8rem;
+    border: 2px solid var(--accent-green);
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+  }
+  
+  .inputs:focus {
+    outline: none;
+    border-color: var(--primary-green);
+  }
+  
+  .results-section {
+    background: var(--light-green);
+    padding: 2rem;
+    border-radius: 8px;
+    margin: 2rem 0;
+  }
+  
+  .requirements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+  }
+  
+  .requirement-item {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .requirement-item span:first-child {
+    color: var(--primary-green);
+    font-weight: 500;
+  }
+  
+  .food-tracker {
+    background: var(--light-green);
+    padding: 2rem;
+    border-radius: 8px;
+  }
+  
+  .food-selectors {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin: 1.5rem 0;
+  }
+  
+  select {
+    background: white url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%232d5d4e'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E") no-repeat right 0.8rem center/16px 16px;
+    appearance: none;
+  }
+  
+  .selected-foods {
+    margin: 1.5rem 0;
+  }
+  
+  .food-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: white;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+  }
+  
+  .food-item input {
+    width: 80px;
+    padding: 0.5rem;
+    border: 2px solid var(--accent-green);
+    border-radius: 6px;
+  }
+  
+  .consumed-nutrients {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-top: 1.5rem;
+  }
+  
+  .consumed-nutrients h4 {
+    color: var(--primary-green);
+    margin-bottom: 1rem;
+  }
+  
+  .consumed-nutrients p {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .nutrition-calculator {
+      margin: 1rem;
+      padding: 1rem;
+    }
+  
+    .requirements-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .food-selectors {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  /* Progress Bars (Add if implementing) */
+  .divProgressBar {
+    height: 8px;
+    background: var(--accent-green);
+    border-radius: 4px;
+    transition: width 0.3s ease;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .results-section, .food-tracker {
+    animation: fadeIn 0.5s ease-out;
+  }
