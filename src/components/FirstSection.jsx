@@ -1,5 +1,5 @@
 import React from 'react';
-import mainbanner from "../../../public/assets/image/LOGOMAIN.PNG";
+import mainbanner from "./public/assets/image/LOGOMAIN.PNG";
 import "../../assets/css/style.css"
 import "../../assets/css/bootstrap.min.css"
 import Marquee from "react-fast-marquee";
